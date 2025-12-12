@@ -222,9 +222,13 @@ void	sort_large(t_data *data)
 		sort_three(data);
 	while (data->b)
 	{
-		int	max = find_max(data->b);
-		int	pos = get_position(data->b, max);
-		int	len = stack_len(data->b);
+		int	max;
+		int	pos;
+		int	len;
+
+		max = find_max(data->b);
+		pos = get_position(data->b, max);
+		len = stack_len(data->b);
 		if (pos <= len / 2)
 		{
 			while (data->b->value != max)
