@@ -54,4 +54,11 @@ void				rb(t_data *data);
 void				rrb(t_data *data);
 
 void				sort(t_data *data);
+bool				is_sorted(t_stack *stack);
+int					find_min(t_stack *stack);
+int					find_max(t_stack *stack);
+int					get_position(t_stack *stack, int value);
+void				sort_three(t_data *data);
+void				sort_small(t_data *data);
+void				sort_large(t_data *data);
 #endif
