@@ -6,7 +6,7 @@
 /*   By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 17:05:16 by smakkass          #+#    #+#             */
-/*   Updated: 2025/12/12 20:01:18 by smakkass         ###   ########.fr       */
+/*   Updated: 2025/12/13 22:32:07 by smakkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,16 @@ bool	stack_swap(t_stack **head)
 	a->prev = b;
 	*head = b; // b is new top
 	return (true);
+}
+int	index_of_rank(t_stack *stack, int rank)
+{
+	const int size = stack_len(stack);
+	int i = 0;
+	while (i++ < size)
+	{
+		if (stack->rank == rank)
+			return (stack->index);
+		stack = stack->next;
+	}
+	return 0;
 }

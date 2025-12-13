@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/12 16:48:08 by smakkass          #+#    #+#             */
-/*   Updated: 2025/12/12 21:12:29 by smakkass         ###   ########.fr       */
+/*   Created: 2025/10/19 16:52:18 by smakkass          #+#    #+#             */
+/*   Updated: 2025/12/14 00:02:07 by smakkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	sa(t_data *data)
+long	ft_atol(const char *str)
 {
-	if (stack_swap(&(data->a)))
-		write_buf(data, "sa\n");
-}
+	int		i;
+	int		sign;
+	long	nb;
 
-void	sb(t_data *data)
-{
-	if (stack_swap(&(data->b)))
-		write_buf(data, "sb\n");
-}
-void	ss(t_data *data)
-{
-	bool	sa;
-	bool	sb;
-
-	sa = stack_swap(&(data->a));
-	sb = stack_swap(&(data->b));
-	if (sa || sb)
-		write_buf(data, "ss\n");
+	i = 0;
+	nb = 0;
+	sign = 1;
+	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (ft_isdigit(str[i]))
+	{
+		nb = nb * 10 + (str[i] - '0');
+		i++;
+	}
+	return (nb * sign);
 }

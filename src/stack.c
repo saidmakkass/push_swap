@@ -6,7 +6,7 @@
 /*   By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 14:11:32 by smakkass          #+#    #+#             */
-/*   Updated: 2025/12/12 20:03:53 by smakkass         ###   ########.fr       */
+/*   Updated: 2025/12/13 23:47:45 by smakkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void	stack_clear(t_stack *stack)
 {
-	t_stack	*head, *tmp;
-
+	t_stack *head, *tmp;
 	if (!stack)
 		return ;
 	head = stack;
@@ -54,14 +53,23 @@ t_stack	*stack_new(int value)
 	new->value = value;
 	return (new);
 }
+static void build_helper(t_data *data,t_stack *head)
+{
+	data->a = head;
+	data->size_a = stack_len(data->a);
+	rank_stack(data->a);
+	global_rank_stack(data->a);
+}
 
 void	build_stack(t_data *data, char **args)
 {
-	int	value;
-	int	i;
+	int		value;
+	int		i;
+	t_stack	*head;
+	t_stack	*current;
+	t_stack	*prev;
 
 	check_error(data, args);
-	t_stack *head, *current, *prev;
 	i = 0;
 	if (args[i])
 		head = stack_new(ft_atoi(args[i++]));
@@ -79,6 +87,5 @@ void	build_stack(t_data *data, char **args)
 	}
 	current->next = head;
 	head->prev = current;
-	data->a = head;
-	data->size_a = stack_len(data->a);
+	build_helper(data, head);
 }

@@ -6,13 +6,13 @@
 /*   By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 16:06:17 by smakkass          #+#    #+#             */
-/*   Updated: 2025/12/12 18:00:19 by smakkass         ###   ########.fr       */
+/*   Updated: 2025/12/13 23:51:50 by smakkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void error(t_data *data)
+void	error(t_data *data)
 {
 	clear_data(data);
 	ft_printf("Error\n");
@@ -56,8 +56,24 @@ static bool	check_dupe(char **args)
 	return (false);
 }
 
+static bool	check_overflow(char **args)
+{
+	int		i;
+	long	value;
+
+	i = 0;
+	while (args[i])
+	{
+		value = ft_atol(args[i]);
+		if (value > INT_MAX || value < INT_MIN)
+			return (true);
+		i++;
+	}
+	return (false);
+}
+
 void	check_error(t_data *data, char **args)
 {
-	if (check_invalid(args) || check_dupe(args))
+	if (check_invalid(args) || check_dupe(args) || check_overflow(args))
 		error(data);
 }

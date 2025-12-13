@@ -6,7 +6,7 @@
 #    By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/25 10:55:13 by smakkass          #+#    #+#              #
-#    Updated: 2025/12/12 16:28:16 by smakkass         ###   ########.fr        #
+#    Updated: 2025/12/13 23:43:15 by smakkass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRCS	=	ft_memset.c ft_strlen.c ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 			ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c \
 			hex_len.c ft_putcharf.c ft_putstrf.c ft_putnbrf.c ft_putunbrf.c ft_puthex_lower.c \
 			ft_puthex_upper.c ft_putaddr.c parser.c write_utils.c ft_printf.c ft_nbrlen.c ft_isspace.c \
-			ft_strcmp.c
+			ft_strcmp.c ft_atol.c
 
 
 OBJS	=	$(SRCS:.c=.o)

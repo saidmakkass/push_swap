@@ -6,7 +6,7 @@
 /*   By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 23:35:43 by smakkass          #+#    #+#             */
-/*   Updated: 2025/12/12 18:17:54 by smakkass         ###   ########.fr       */
+/*   Updated: 2025/12/13 22:50:08 by smakkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 typedef struct s_stack
 {
 	int				value;
+	int				index;
+	int				rank;
+	int				global_rank;
 	struct s_stack	*prev;
 	struct s_stack	*next;
 }					t_stack;
@@ -44,14 +47,29 @@ void				clear_data(t_data *data);
 
 void				write_buf(t_data *data, const char *s);
 void				print_buf(t_data *data);
+
 void				pa(t_data *data);
 void				pb(t_data *data);
+
 void				sa(t_data *data);
 void				sb(t_data *data);
+void				ss(t_data *data);
+
 void				ra(t_data *data);
-void				rra(t_data *data);
 void				rb(t_data *data);
+void				rr(t_data *data);
+
+void				rra(t_data *data);
 void				rrb(t_data *data);
+void				rrr(t_data *data);
 
 void				sort(t_data *data);
+void				rank_stack(t_stack *stack);
+void				global_rank_stack(t_stack *stack);
+void				index_stack(t_stack *stack);
+bool				is_sorted_a(t_stack *stack);
+bool				is_sorted_b(t_stack *stack);
+void				small_sort(t_data *data);
+int					index_of_rank(t_stack *stack, int rank);
+
 #endif
