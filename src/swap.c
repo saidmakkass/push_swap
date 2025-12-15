@@ -6,7 +6,7 @@
 /*   By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 16:48:08 by smakkass          #+#    #+#             */
-/*   Updated: 2025/12/12 21:12:29 by smakkass         ###   ########.fr       */
+/*   Updated: 2025/12/15 01:03:22 by smakkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 void	sa(t_data *data)
 {
 	if (stack_swap(&(data->a)))
-		write_buf(data, "sa\n");
+		ft_printf("sa\n");
 }
 
 void	sb(t_data *data)
 {
 	if (stack_swap(&(data->b)))
-		write_buf(data, "sb\n");
+		ft_printf("sb\n");
 }
+
 void	ss(t_data *data)
 {
 	bool	sa;
@@ -31,5 +32,5 @@ void	ss(t_data *data)
 	sa = stack_swap(&(data->a));
 	sb = stack_swap(&(data->b));
 	if (sa || sb)
-		write_buf(data, "ss\n");
+		ft_printf("ss\n");
 }

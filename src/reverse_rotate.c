@@ -6,7 +6,7 @@
 /*   By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 21:08:25 by smakkass          #+#    #+#             */
-/*   Updated: 2025/12/13 18:38:53 by smakkass         ###   ########.fr       */
+/*   Updated: 2025/12/15 01:03:33 by smakkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ void	rra(t_data *data)
 		return ;
 	data->a = data->a->prev;
 	index_stack(data->a);
-	write_buf(data, "rra\n");
+	ft_printf("rra\n");
 }
+
 void	rrb(t_data *data)
 {
 	if (!data->b)
@@ -30,7 +31,7 @@ void	rrb(t_data *data)
 		return ;
 	data->b = data->b->prev;
 	index_stack(data->b);
-	write_buf(data, "rrb\n");
+	ft_printf("rrb\n");
 }
 
 void	rrr(t_data *data)
@@ -45,5 +46,5 @@ void	rrr(t_data *data)
 		data->b = data->b->prev;
 	index_stack(data->a);
 	index_stack(data->b);
-	write_buf(data, "rrr\n");
+	ft_printf("rrr\n");
 }

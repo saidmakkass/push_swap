@@ -6,7 +6,7 @@
 /*   By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 13:44:10 by smakkass          #+#    #+#             */
-/*   Updated: 2025/12/13 22:49:27 by smakkass         ###   ########.fr       */
+/*   Updated: 2025/12/15 00:59:20 by smakkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	reset_rank(t_stack *stack)
 	}
 }
 
-void index_stack(t_stack *stack)
+void	index_stack(t_stack *stack)
 {
 	const int	size = stack_len(stack);
 	int			i;
@@ -63,32 +63,6 @@ void	rank_stack(t_stack *stack)
 		{
 			if (stack->value > current->value)
 				stack->rank++;
-			current = current->next;
-		}
-		stack = stack->next;
-	}
-}
-void	global_rank_stack(t_stack *stack)
-{
-	t_stack		*head;
-	t_stack		*current;
-	const int	size = stack_len(stack);
-	int			i;
-	int			j;
-
-	if (!stack)
-		return ;
-	head = stack;
-	i = 0;
-	j = 0;
-	while (i++ < size)
-	{
-		current = head;
-		j = 0;
-		while (j++ < size)
-		{
-			if (stack->value > current->value)
-				stack->global_rank++;
 			current = current->next;
 		}
 		stack = stack->next;

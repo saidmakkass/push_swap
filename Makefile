@@ -6,7 +6,7 @@
 #    By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/08 21:16:50 by smakkass          #+#    #+#              #
-#    Updated: 2025/12/14 00:03:56 by smakkass         ###   ########.fr        #
+#    Updated: 2025/12/15 08:21:52 by smakkass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,10 @@ LIBFT		=	$(LIBFT_DIR)/libft.a
 LIBFT_H		=	$(LIBFT_DIR)/libft.h
 
 SRCDIR		=	./src
-SRC			=	main.c stack.c error.c stack_utils.c push.c swap.c rotate.c reverse_rotate.c buffer.c sort.c rank.c small_sort.c
+SRC			=	main.c stack.c error.c stack_utils.c \
+				push.c swap.c rotate.c reverse_rotate.c \
+				sort.c rank.c small_sort.c big_sort.c \
+				greedy_insert.c greedy_utils.c
 
 INCLUDE_DIR	=	./include
 INCLUDE		=	$(INCLUDE_DIR)/push_swap.h
