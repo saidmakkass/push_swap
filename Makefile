@@ -6,48 +6,68 @@
 #    By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/08 21:16:50 by smakkass          #+#    #+#              #
-#    Updated: 2025/12/15 08:21:52 by smakkass         ###   ########.fr        #
+#    Updated: 2025/12/18 13:21:55 by smakkass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	push_swap
+NAME				=	push_swap
+CHECKER				=	checker
 
-LIBFT_DIR	=	./libft
-LIBFT		=	$(LIBFT_DIR)/libft.a
-LIBFT_H		=	$(LIBFT_DIR)/libft.h
+LIBFT_DIR			=	./libft
+LIBFT				=	$(LIBFT_DIR)/libft.a
 
-SRCDIR		=	./src
-SRC			=	main.c stack.c error.c stack_utils.c \
-				push.c swap.c rotate.c reverse_rotate.c \
-				sort.c rank.c small_sort.c big_sort.c \
-				greedy_insert.c greedy_utils.c
+INCLUDE_DIR			=	./include
+PS_INCLUDE			=	$(INCLUDE_DIR)/push_swap.h
+CH_INCLUDE			=	$(INCLUDE_DIR)/checker_bonus.h
 
-INCLUDE_DIR	=	./include
-INCLUDE		=	$(INCLUDE_DIR)/push_swap.h
+SRC_DIR				=	./src
 
-OBJS		=	$(addprefix $(SRCDIR)/, $(SRC:.c=.o))
+PS_DIR				=	$(SRC_DIR)/push_swap
+PS_SRC				=	main.c push.c swap.c rotate.c reverse_rotate.c \
+						sort.c small_sort.c big_sort.c greedy_insert.c \
+						greedy_utils.c stack.c error.c stack_utils.c rank.c
 
-CC			=	cc
-CFLAGS		=	-Wall -Werror -Wextra -Iinclude -g
-RM			=	rm -f
+PS_OBJS				=	$(addprefix $(PS_DIR)/, $(PS_SRC:.c=.o))
+
+CH_DIR				=	$(SRC_DIR)/checker
+
+CH_SRC				=	main_bonus.c push_bonus.c reverse_rotate_bonus.c \
+						rotate_bonus.c swap_bonus.c checker_bonus.c stack_bonus.c \
+						error_bonus.c stack_utils_bonus.c get_next_line_utils_bonus.c \
+						get_next_line_bonus.c
+
+CH_OBJS				=	$(addprefix $(CH_DIR)/, $(CH_SRC:.c=.o))
+
+CC					=	cc
+CFLAGS				=	-Wall -Werror -Wextra -Iinclude -g
+RM					=	rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(LIBFT)
+bonus: $(CHECKER)
+
+$(NAME): $(PS_OBJS) $(LIBFT)
+	$(CC) $(CFLAGS) -o $@ $^
+
+$(CHECKER): $(CH_OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) -o $@ $^
 
 $(LIBFT):
 	make -C $(LIBFT_DIR)
 
-%.o: %.c $(INCLUDE)
+%.o: %.c $(PS_INCLUDE)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+%_bonus.o: %_bonus.c $(CH_INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(PS_OBJS) $(CH_OBJS)
 	make fclean -C $(LIBFT_DIR)
 
 fclean: clean
 	$(RM) $(NAME)
+	$(RM) $(CHECKER)
 
 re: fclean all
 
