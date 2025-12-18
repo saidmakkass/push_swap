@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker_bonus.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/19 00:55:38 by smakkass          #+#    #+#             */
+/*   Updated: 2025/12/19 00:55:47 by smakkass         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "checker_bonus.h"
 
 void	get_moves(t_data *data)
@@ -8,10 +20,10 @@ void	get_moves(t_data *data)
 	while (1)
 	{
 		line = get_next_line(0);
-		if(!line)
-			break;
+		if (!line)
+			break ;
 		node = ft_lstnew(line);
-		if(!node)
+		if (!node)
 			error(data);
 		ft_lstadd_back(&data->moves, node);
 	}
@@ -68,9 +80,11 @@ void	run_move(t_data *data, char *move)
 
 void	checker(t_data *data)
 {
+	t_list	*cur;
+
 	get_moves(data);
 	check_moves(data);
-	t_list *cur = data->moves;
+	cur = data->moves;
 	while (cur)
 	{
 		run_move(data, (char *)(cur->content));
