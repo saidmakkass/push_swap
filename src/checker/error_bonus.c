@@ -6,7 +6,7 @@
 /*   By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 16:06:17 by smakkass          #+#    #+#             */
-/*   Updated: 2025/12/18 14:47:07 by smakkass         ###   ########.fr       */
+/*   Updated: 2025/12/19 00:49:56 by smakkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	clear_data(t_data *data)
 			free((data->args)[i++]);
 		free(data->args);
 	}
-	if(data->moves)
+	if (data->moves)
 		ft_lstclear(&data->moves, free);
 	free(data);
 }
