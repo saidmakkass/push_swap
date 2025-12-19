@@ -42,7 +42,7 @@ In case of error, the program prints "Error" to stderr.
 <h3 align="center">500 Elements</h3>
 <p align="center">
   <img
-    src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjh6dG9qeDhneHB5YjM2Z2t0MmFsNDd6bHl4c3Q4dGVzbG1mZTVoaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/v39Lpss0s7OitEOg0d/giphy.gif"
+    src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2UxdGQzYW9qcXoxaWMybDJ1cTBweGowMWNtaTRkbXlrYm51YzVraSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/v39Lpss0s7OitEOg0d/giphy.gif"
     width="600"
   />
 </p>
