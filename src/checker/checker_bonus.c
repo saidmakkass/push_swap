@@ -6,7 +6,7 @@
 /*   By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 00:55:38 by smakkass          #+#    #+#             */
-/*   Updated: 2025/12/19 00:56:55 by smakkass         ###   ########.fr       */
+/*   Updated: 2025/12/19 15:50:31 by smakkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,17 @@ void	check_moves(t_data *data)
 	cur = data->moves;
 	while (cur)
 	{
-		if (ft_strcmp((char *)(data->moves->content), "pa\n")
-		&& ft_strcmp((char *)(data->moves->content), "pb\n")
-		&& ft_strcmp((char *)(data->moves->content), "ra\n")
-		&& ft_strcmp((char *)(data->moves->content), "rb\n")
-		&& ft_strcmp((char *)(data->moves->content), "rr\n")
-		&& ft_strcmp((char *)(data->moves->content), "sa\n")
-		&& ft_strcmp((char *)(data->moves->content), "sb\n")
-		&& ft_strcmp((char *)(data->moves->content), "ss\n")
-		&& ft_strcmp((char *)(data->moves->content), "rra\n")
-		&& ft_strcmp((char *)(data->moves->content), "rrb\n")
-		&& ft_strcmp((char *)(data->moves->content), "rrr\n"))
+		if (ft_strcmp((char *)(cur->content), "pa\n")
+		&& ft_strcmp((char *)(cur->content), "pb\n")
+		&& ft_strcmp((char *)(cur->content), "ra\n")
+		&& ft_strcmp((char *)(cur->content), "rb\n")
+		&& ft_strcmp((char *)(cur->content), "rr\n")
+		&& ft_strcmp((char *)(cur->content), "sa\n")
+		&& ft_strcmp((char *)(cur->content), "sb\n")
+		&& ft_strcmp((char *)(cur->content), "ss\n")
+		&& ft_strcmp((char *)(cur->content), "rra\n")
+		&& ft_strcmp((char *)(cur->content), "rrb\n")
+		&& ft_strcmp((char *)(cur->content), "rrr\n"))
 			error(data);
 		cur = cur->next;
 	}
