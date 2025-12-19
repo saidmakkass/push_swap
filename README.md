@@ -26,7 +26,7 @@ In case of error, the program prints "Error" to stderr.
 <h3 align="center">5 Elements</h3>
 <p align="center">
   <img
-    src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXF3bGlya2IwdGd6aHdzY20xM3YzdWZ1Z2FnZTNwZ2cwNjViZXZnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7yBbzuniBRrTi2Fopx/giphy.gif"
+    src="https://github.com/saidmakkass/push_swap/blob/gif/gif/push_swap_visual_example_5_elements.gif?raw=true"
     width="600"
   />
 </p>
@@ -34,7 +34,7 @@ In case of error, the program prints "Error" to stderr.
 <h3 align="center">100 Elements</h3>
 <p align="center">
   <img
-    src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExODViNTVoZDB5MGpyNzYzaTJudWVkanRwem1vbDM3MW95MHgwb3N0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLROYwyXhQUnJF18hJ/giphy.gif"
+    src="https://github.com/saidmakkass/push_swap/blob/gif/gif/push_swap_visual_example_100_elements.gif?raw=true"
     width="600"
   />
 </p>
@@ -42,7 +42,7 @@ In case of error, the program prints "Error" to stderr.
 <h3 align="center">500 Elements</h3>
 <p align="center">
   <img
-    src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2UxdGQzYW9qcXoxaWMybDJ1cTBweGowMWNtaTRkbXlrYm51YzVraSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/v39Lpss0s7OitEOg0d/giphy.gif"
+    src="https://github.com/saidmakkass/push_swap/blob/gif/gif/push_swap_visual_example_500_elements.gif?raw=true"
     width="600"
   />
 </p>
