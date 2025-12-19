@@ -20,7 +20,7 @@ In case of error, the program prints "Error" to stderr.
 - **The Turk Algorithm:**		https://medium.com/@ayogun/push-swap-c1f5d2d41e97
 - **Push_swap Visulizer:**		https://github.com/o-reo/push_swap_visualizer
 - **Push_swap Tester:**			https://github.com/gemartin99/Push-Swap-Tester
-- **AI usage:** 				AI was uset for brainstorming algorithm ideas and pre evaluating the pros and cons of each algorithm.
+- **AI usage:** 				AI was used for brainstorming algorithm ideas and pre evaluating the pros and cons of each algorithm.
 
 ## Visual Example
 <h3 align="center">5 Elements</h3>

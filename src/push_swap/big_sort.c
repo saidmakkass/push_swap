@@ -6,7 +6,7 @@
 /*   By: smakkass <smakkass@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 21:48:47 by smakkass          #+#    #+#             */
-/*   Updated: 2025/12/19 14:45:22 by smakkass         ###   ########.fr       */
+/*   Updated: 2025/12/19 22:08:40 by smakkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,18 @@ void	big_sort(t_data *data)
 	{
 		if (data->a->rank <= data->size_a / chunks)
 		{
-			if (data->size_a >= 200 && data->a->rank <= data->size_a / chunks
-				/ 2)
+			if (data->size_a >= 200 && data->a->rank <= data->size_a / chunks / 2)
 			{
 				pb(data);
-				rb(data);
+				if (data->size_a > 0 && data->a->rank > data->size_a / chunks)
+					rr(data);
+				else
+					rb(data);
 			}
 			else
 				pb(data);
 		}
-		else
+		else if (data->a->rank > data->size_a / chunks)
 			ra(data);
 	}
 	greedy_insert(data);
